@@ -3,7 +3,9 @@ import './App.css';
 export default function App() {
   return (
     <>
-      <h1>App </h1>
+      <div className='w-screen h-screen bg-light-primary flex items-center justify-center'>
+          
+      </div>
     </>
   );
 }
