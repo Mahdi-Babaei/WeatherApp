@@ -4,7 +4,7 @@ export default function MenuItem({title , icon , activeTab , setActiveTab}) {
 
   return (
     <>
-        <div className={`py-2 cursor-pointer ${activeTab === title ? 'text-black' : 'text-gray-400 hover:text-black'} transition-all`} onClick={() => setActiveTab(title)}>
+        <div className={`cursor-pointer ${activeTab === title ? 'text-gray-900 dark:text-zinc-100' : 'text-gray-400 hover:text-gray-900 dark:text-zinc-500 dark:hover:text-zinc-100'} transition-all`} onClick={() => setActiveTab(title)}>
             {icon}
         </div>
     </>

@@ -22,11 +22,12 @@ export default function SidebarMenu() {
 
   return (
     <>
-        <div className='h-full w-fit p-4 flex flex-col items-center divide-y divide-gray-300 bg-light-secondary rounded-2xl'>
-            <div className='py-3 px-2'>
-                logo
-            </div>
-            <div className='flex flex-col gap-y-2 py-3 px-2'>
+        <div className='h-full w-fit flex flex-col items-center divide-y divide-gray-300 dark:divide-gray-700  bg-light-secondary dark:bg-dark-secondary rounded-2xl shadow-xs p-4 text-gray-900 dark:text-zinc-100'>
+            <a href='#' className='flex flex-col items-center pb-4'>
+                <img src='/images/logo.png' className='w-9 h-9 object-cover'/>
+                <span className='text-sm'>Weather</span>
+            </a>
+            <div className='flex flex-col gap-y-6 items-center py-4 w-full'>
                 {menuItems.map(item => {
                     return <MenuItem {...item} activeTab={activeTab} setActiveTab={setActiveTab}/>
                 })}
