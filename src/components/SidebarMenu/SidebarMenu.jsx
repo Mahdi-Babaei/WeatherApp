@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { useState } from 'react'
 import { BiCategory } from "react-icons/bi";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoCalendarClearOutline } from "react-icons/io5";
@@ -9,7 +9,7 @@ import MenuItem from './MenuItem/MenuItem';
 import { TbLogout } from "react-icons/tb";
 
 let menuItems = [
-    {title: 'category' , icon: <BiCategory  className='w-7 h-7'/>},
+    {title: 'dashboard' , icon: <BiCategory  className='w-7 h-7'/>},
     {title: 'location' , icon: <IoLocationOutline  className='w-7 h-7'/>},
     {title: 'calender' , icon: <IoCalendarClearOutline className='w-7 h-7'/>},
     {title: 'explore' , icon: <MdOutlineExplore className='w-7 h-7'/>},
@@ -18,6 +18,8 @@ let menuItems = [
 ]
 
 export default function SidebarMenu() {
+    const [activeTab , setActiveTab] = useState('dashboard')
+
   return (
     <>
         <div className='h-full w-fit p-4 flex flex-col items-center divide-y divide-gray-300 bg-light-secondary rounded-2xl'>
@@ -26,7 +28,7 @@ export default function SidebarMenu() {
             </div>
             <div className='flex flex-col gap-y-2 py-3 px-2'>
                 {menuItems.map(item => {
-                    return <MenuItem {...item}/>
+                    return <MenuItem {...item} activeTab={activeTab} setActiveTab={setActiveTab}/>
                 })}
             </div>
             <div className='mt-auto cursor-pointer text-gray-500 hover:text-red-500 transition-all'>
