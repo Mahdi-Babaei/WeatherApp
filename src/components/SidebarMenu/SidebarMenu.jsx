@@ -32,7 +32,7 @@ export default function SidebarMenu() {
                     return <MenuItem {...item} activeTab={activeTab} setActiveTab={setActiveTab}/>
                 })}
             </div>
-            <div className='mt-auto cursor-pointer text-gray-500 hover:text-red-500 transition-all'>
+            <div className='mt-auto cursor-pointer text-gray-500/40 hover:text-red-700/80 transition-all'>
                 <TbLogout className='w-7 h-7 flex items-center justify-center'/>
             </div>
         </div>
