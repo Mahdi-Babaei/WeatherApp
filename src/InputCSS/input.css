@@ -3,10 +3,35 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 
+@font-face {
+    font-family: 'NunitoRegular' ;
+    src: url('/public/fonts/Nunito/Nunito-Regular.ttf');
+}
+@font-face {
+    font-family: 'NunitoLight' ;
+    src: url('/public/fonts/Nunito/Nunito-Light.ttf');
+}
+@font-face {
+    font-family: 'NunitoSemibold' ;
+    src: url('/public/fonts/Nunito/Nunito-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'NunitoBold' ;
+    src: url('/public/fonts/Nunito/Nunito-Bold.ttf');
+}
+
+
 @theme {
     --color-light-primary: #f2f3f4;
     --color-light-secondary: #f8f9fc;
-
     --color-dark-primary: #141414;
     --color-dark-secondary: #1f1f1f;
+
+
+    --font-NunitoRegular: 'NunitoRegular';
+    --font-NunitoLight: 'NunitoLight';
+    --font-NunitoSemibold: 'NunitoSemibold';
+    --font-NunitoBold: 'NunitoBold';
+
+
 }

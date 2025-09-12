@@ -19,9 +19,11 @@ export default function MainCity() {
               <span>24</span>
               <span>icon</span>
             </div>
-            <div className='flex items-center divide-x divide-white/40 w-full justify-center'>
-              <MainCityInfoBox title='Wind' data='9 km/h' icon={<PiWind className='w-8 h-8'/>}/>
-              <MainCityInfoBox title='Humidity' data='25%' icon={<PiDropLight className='w-8 h-8'/>}/>
+            <div className='flex items-center w-full justify-between'>
+              <MainCityInfoBox title='Wind' data='9 km / h' icon={<PiWind className='w-8 h-8'/>}/>
+              <span className='w-[1px] h-11 bg-white/60 rounded-full'></span>
+              <MainCityInfoBox title='Humidity' data='25 %' icon={<PiDropLight className='w-8 h-8'/>}/>
+              <span className='w-[1px] h-11 bg-white/60 rounded-full'></span>
               <MainCityInfoBox title='Visibility' data='1.7 km' icon={<PiEye className='w-8 h-8'/>}/>
             </div>
         </div>
