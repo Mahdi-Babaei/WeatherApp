@@ -1,5 +1,6 @@
 import './App.css';
 import MainCity from './components/MainCity/MainCity';
+import SearchBox from './components/SearchBox/SearchBox';
 import SidebarMenu from './components/SidebarMenu/SidebarMenu';
 
 export default function App() {
@@ -12,8 +13,13 @@ export default function App() {
                 <div className='col-span-1'>
                     <MainCity/>
                 </div>
-                <div className='col-span-3'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente omnis maxime commodi minima nihil consectetur adipisci aut doloribus? Corporis sit commodi error placeat, illum saepe harum dolores in ab eveniet.
+                <div className='col-span-3 flex flex-col gap-y-5'>
+                    <div className='grid grid-cols-5 gap-x-8 items-center'>
+                      <div className='col-span-2'>
+                        <SearchBox />
+                      </div>
+                      <div className='col-span-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint quo consectetur, deserunt qui iusto est aperiam doloremque provident facere beatae impedit? Accusamus eligendi harum neque corporis voluptate rerum libero saepe!</div>
+                    </div>
                 </div>
               </div>
               <div className='bg-white/5 row-span-2'>
