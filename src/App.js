@@ -25,7 +25,7 @@ export default function App() {
                       <div className='col-span-2'>
                         <SearchBox />
                       </div>
-                      <div className='flex items-center gap-x-8 col-span-3'>
+                      <div className='flex items-center justify-end gap-x-8 col-span-3'>
                         <Theme />
                         <Notifications />
                         <User />

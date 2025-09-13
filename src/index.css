@@ -624,6 +624,9 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-end {
+    justify-content: flex-end;
+  }
   .justify-evenly {
     justify-content: space-evenly;
   }
@@ -647,6 +650,9 @@
   }
   .gap-x-10 {
     column-gap: calc(var(--spacing) * 10);
+  }
+  .gap-x-18 {
+    column-gap: calc(var(--spacing) * 18);
   }
   .gap-y-5 {
     row-gap: calc(var(--spacing) * 5);
