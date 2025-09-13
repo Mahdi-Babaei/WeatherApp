@@ -27,7 +27,7 @@ export default function SidebarMenu() {
                 <img src='/images/logo.png' className='w-9 h-9 object-cover'/>
                 <span className='text-sm'>Weather</span>
             </a>
-            <div className='flex flex-col gap-y-6 items-center py-4 w-full'>
+            <div className='flex flex-col gap-y-8 items-center py-8 w-full'>
                 {menuItems.map(item => {
                     return <MenuItem {...item} activeTab={activeTab} setActiveTab={setActiveTab}/>
                 })}

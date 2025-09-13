@@ -5,8 +5,8 @@ export default function MainCityInfoBox({title , data , icon}) {
     <>
       <div className="flex flex-col items-center">
         {icon}
-        <span className="text-sm font-NunitoRegular">{data}</span>
-        <span className="text-sm font-NunitoLight text-white/70">{title}</span>
+        <span className="font-NunitoRegular">{data}</span>
+        <span className="font-NunitoLight text-white/70">{title}</span>
       </div>
     </>
   );
