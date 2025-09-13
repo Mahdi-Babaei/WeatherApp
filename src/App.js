@@ -5,6 +5,7 @@ import SearchBox from './components/SearchBox/SearchBox';
 import SidebarMenu from './components/SidebarMenu/SidebarMenu';
 import Theme from './components/Theme/Theme';
 import { ThemeContext } from './context/Theme';
+import Notifications from './components/Notifications/Notifications';
 
 export default function App() {
   const {theme , setTheme} = useContext(ThemeContext)
@@ -23,8 +24,9 @@ export default function App() {
                       <div className='col-span-2'>
                         <SearchBox />
                       </div>
-                      <div className=' flex items-center col-span-3 flex-wrap'>
+                      <div className='flex items-center gap-x-8 col-span-3 flex-wrap'>
                         <Theme />
+                        <Notifications />
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis numquam ab facilis provident maiores ea non veniam amet rem suscipit? Dolor voluptas eius quas odit autem minima maiores assumenda doloribus!
                       </div>
                     </div>
