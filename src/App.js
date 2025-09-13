@@ -23,9 +23,10 @@ export default function App() {
                       <div className='col-span-2'>
                         <SearchBox />
                       </div>
-                      <div className='col-span-3 flex items-center gap-x-8'>
+                      <div className=' flex items-center col-span-3 flex-wrap'>
                         <Theme />
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint quo consectetur, deserunt qui iusto est aperiam doloremque provident facere beatae impedit? Accusamus eligendi harum neque corporis voluptate rerum libero saepe!</div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis numquam ab facilis provident maiores ea non veniam amet rem suscipit? Dolor voluptas eius quas odit autem minima maiores assumenda doloribus!
+                      </div>
                     </div>
                 </div>
               </div>
