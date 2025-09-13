@@ -6,15 +6,16 @@ import SidebarMenu from './components/SidebarMenu/SidebarMenu';
 import Theme from './components/Theme/Theme';
 import { ThemeContext } from './context/Theme';
 import Notifications from './components/Notifications/Notifications';
+import User from './components/User/User';
 
 export default function App() {
   const {theme , setTheme} = useContext(ThemeContext)
 
   return (
     <>
-      <div className={`w-screen h-screen bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none`}>
+      <div className={`h-screen w-full bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none dark:text-gray-100`}>
           <SidebarMenu />
-          <div className='grid grid-rows-5 gap-y-5'>
+          <div className='grid grid-rows-5 gap-y-5 w-full'>
               <div className='grid grid-cols-4 gap-x-5   row-span-3'>
                 <div className='col-span-1'>
                     <MainCity/>
@@ -24,10 +25,10 @@ export default function App() {
                       <div className='col-span-2'>
                         <SearchBox />
                       </div>
-                      <div className='flex items-center gap-x-8 col-span-3 flex-wrap'>
+                      <div className='flex items-center gap-x-8 col-span-3'>
                         <Theme />
                         <Notifications />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis numquam ab facilis provident maiores ea non veniam amet rem suscipit? Dolor voluptas eius quas odit autem minima maiores assumenda doloribus!
+                        <User />
                       </div>
                     </div>
                 </div>
