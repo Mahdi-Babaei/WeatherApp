@@ -7,13 +7,14 @@ import Theme from './components/Theme/Theme';
 import { ThemeContext } from './context/Theme';
 import Notifications from './components/Notifications/Notifications';
 import User from './components/User/User';
+import Forecast from './components/Forecast/Forecast';
 
 export default function App() {
   const {theme , setTheme} = useContext(ThemeContext)
 
   return (
     <>
-      <div className={`h-screen w-full bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none dark:text-gray-100`}>
+      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none dark:text-gray-100`}>
           <SidebarMenu />
           <div className='grid grid-rows-5 gap-y-5 w-full'>
               <div className='grid grid-cols-4 gap-x-5   row-span-3'>
@@ -30,6 +31,9 @@ export default function App() {
                         <Notifications />
                         <User />
                       </div>
+                    </div>
+                    <div className='grid grid-cols-2 gap-5 w-full h-full'>
+                        <Forecast />
                     </div>
                 </div>
               </div>
