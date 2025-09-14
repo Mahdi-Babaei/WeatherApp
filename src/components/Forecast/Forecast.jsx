@@ -3,12 +3,12 @@ import React from 'react'
 export default function Forecast() {
   return (
     <>
-        <div className='bg-dark-secondary rounded-3xl flex flex-col justify-between gap-y-8 py-5 px-8 h-full relative'>
+        <div className='bg-dark-secondary rounded-3xl flex flex-col justify-between gap-y-5 py-5 px-8 h-full relative'>
             <div className='flex justify-between items-center'>
                 <h2 className='font-NunitoBold text-3xl'>Next 7 Days</h2>
                 <span className='text-blue-400 font-NunitoSemibold text-lg cursor-pointer hover:text-blue-500 transition-all'>See All</span>
             </div>
-            <div className='flex flex-col justify-between h-full'>
+            <div className='flex flex-col justify-between gap-y-5 h-full'>
                 <div className='grid grid-cols-3 text-xl  font-NunitoLight'>
                     <h4 className='font-NunitoSemibold text-left'>Monday</h4>
                     <div className="flex items-center justify-center gap-x-2">

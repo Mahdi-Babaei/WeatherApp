@@ -8,16 +8,17 @@ import { ThemeContext } from './context/Theme';
 import Notifications from './components/Notifications/Notifications';
 import User from './components/User/User';
 import Forecast from './components/Forecast/Forecast';
+import OtherCity from './components/OtherCity/OtherCity';
 
 export default function App() {
   const {theme , setTheme} = useContext(ThemeContext)
 
   return (
     <>
-      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none dark:text-gray-100`}>
+      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none dark:text-gray-100 overflow-hidden`}>
           <SidebarMenu />
-          <div className='grid grid-rows-5 gap-y-5 w-full'>
-              <div className='grid grid-cols-4 gap-x-5   row-span-3'>
+          <div className='flex flex-col gap-y-5 w-full'>
+              <div className='grid grid-cols-4 gap-x-5'>
                 <div className='col-span-1'>
                     <MainCity/>
                 </div>
@@ -38,8 +39,12 @@ export default function App() {
                     </div>
                 </div>
               </div>
-              <div className='bg-white/5 row-span-2'>
-                
+              <div className='grid grid-cols-4 gap-x-5 h-full'>
+                  <div className='col-span-1 flex flex-col gap-y-5 h-full'>
+                      <OtherCity />
+                      <OtherCity />
+                      <OtherCity />
+                  </div>
               </div>
           </div>
       </div>
