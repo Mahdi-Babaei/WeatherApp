@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <>
-      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none dark:text-gray-100 overflow-hidden`}>
+      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none dark:text-gray-100 `}>
           <SidebarMenu />
           <div className='flex flex-col gap-y-5 w-full'>
               <div className='grid grid-cols-4 gap-x-5'>
@@ -47,7 +47,7 @@ export default function App() {
                       <OtherCity />
                       <AddCity />
                   </div>
-                  <div className='col-span-3 h-full'>
+                  <div className='col-span-3'>
                       <Overview />
                   </div>
               </div>
