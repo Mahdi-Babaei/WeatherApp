@@ -10,6 +10,7 @@ import User from './components/User/User';
 import Forecast from './components/Forecast/Forecast';
 import OtherCity from './components/OtherCity/OtherCity';
 import AddCity from './components/AddCity/AddCity';
+import Overview from './components/Overview/Overview';
 
 export default function App() {
   const {theme , setTheme} = useContext(ThemeContext)
@@ -45,6 +46,9 @@ export default function App() {
                       <OtherCity />
                       <OtherCity />
                       <AddCity />
+                  </div>
+                  <div className='col-span-3 h-full'>
+                      <Overview />
                   </div>
               </div>
           </div>
