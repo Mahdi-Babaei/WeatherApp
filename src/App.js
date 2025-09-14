@@ -9,6 +9,7 @@ import Notifications from './components/Notifications/Notifications';
 import User from './components/User/User';
 import Forecast from './components/Forecast/Forecast';
 import OtherCity from './components/OtherCity/OtherCity';
+import AddCity from './components/AddCity/AddCity';
 
 export default function App() {
   const {theme , setTheme} = useContext(ThemeContext)
@@ -43,7 +44,7 @@ export default function App() {
                   <div className='col-span-1 flex flex-col gap-y-5 h-full'>
                       <OtherCity />
                       <OtherCity />
-                      <OtherCity />
+                      <AddCity />
                   </div>
               </div>
           </div>
