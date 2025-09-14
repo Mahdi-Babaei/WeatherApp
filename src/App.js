@@ -34,6 +34,7 @@ export default function App() {
                     </div>
                     <div className='grid grid-cols-2 gap-5 w-full h-full'>
                         <Forecast />
+                        <div className='bg-dark-secondary w-full h-full rounded-3xl'></div>
                     </div>
                 </div>
               </div>

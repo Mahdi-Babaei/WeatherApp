@@ -42,7 +42,7 @@ export default function Forecast() {
                     <h6 className='text-right'>23 / 18</h6>
                 </div>
             </div>
-            <div className='bg-gradient-to-t from-blue-500 via-blue-400  to-blue-300 -mx-5 px-5 py-5 rounded-2xl'>
+            <div className='bg-gradient-to-t from-blue-500 via-blue-400  to-blue-300 -mx-5 px-5 py-7 rounded-3xl'>
                 <div className='grid grid-cols-3 text-xl  font-NunitoLight'>
                     <h4 className='font-NunitoSemibold text-left'>Tommorow</h4>
                     <div className="flex items-center gap-x-2 justify-center">
