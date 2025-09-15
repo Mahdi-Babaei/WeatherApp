@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from "recharts";
+import {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer , Legend} from "recharts";
 import CustomTooltip from "./CustomTooltip";
 import ChartData from "./ChartData";
 
@@ -23,10 +23,11 @@ export default function OverviewChart ({ activeChart , setActiveChart }) {
           <XAxis dataKey="day" stroke="var(--color-zinc-400)" />
           <YAxis unit={activeChart === 'Temperature' ? ' °C' : ' %'} domain={['auto', 'auto']} stroke="var(--color-zinc-400)" />
           <Tooltip content={<CustomTooltip activeChart={activeChart}/>} cursor={false} />
+          <Legend verticalAlign="top"/>
           <Line
             type="monotone"
             dataKey={activeChart === 'Temperature' ? 'temp' : activeChart === 'Humidity' ? 'hum' : 'rain'}
-            name={activeChart}
+            name={`${activeChart} ${activeChart !== 'Rainfall' ? `(Average)` : '(Chance)'} `}
             stroke="#3b82f6"
             strokeWidth={2}
             dot={{ r: 4, fill: "#3b82f6", style: { outline: 'none' } }}
