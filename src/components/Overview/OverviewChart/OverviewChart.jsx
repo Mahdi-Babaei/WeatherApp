@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import {LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from "recharts";
 import CustomTooltip from "./CustomTooltip";
-import ChartData, { data } from "./ChartData";
+import ChartData from "./ChartData";
 
 export default function OverviewChart ({ activeChart , setActiveChart }) {
+  const [chartData , setChartData] = useState([])
   return (
     <div className="w-full h-full select-none">
-      <ChartData />
+      <ChartData setChartData={setChartData}/>
       <style>
         {`
           /* Chrome Svg Outline Bug fixed*/
@@ -17,7 +18,7 @@ export default function OverviewChart ({ activeChart , setActiveChart }) {
       </style>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
-          data={data}
+          data={chartData}
           margin={{ top: 30, right: 20 , left: -10}} >
           <XAxis dataKey="day" stroke="var(--color-zinc-400)" />
           <YAxis unit={activeChart === 'Temperature' ? ' °C' : ' %'} domain={['auto', 'auto']} stroke="var(--color-zinc-400)" />

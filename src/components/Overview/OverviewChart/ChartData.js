@@ -2,11 +2,12 @@ import React, { useEffect , useContext } from 'react'
 import useFetchData from '../../../hooks/useFetchData'
 import { CityContext } from '../../../context/City'
 
-export let data = [{day: '' , temp: 10 , hum: 30 , rain: 20}]
 
-export default function ChartData() {
+export default function ChartData({setChartData}) {
     const {city , setCity} = useContext(CityContext)
     const {fetchData , isLoading} = useFetchData('forecast' , city , '7')
+    
+    let data = [{day: '' , temp: 10 , hum: 30 , rain: 20}]
 
      const getWeekDayFunc= (date) => {
         const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -26,6 +27,8 @@ export default function ChartData() {
             }
             data.push(newWeekDay)
         })
+
+        setChartData(data)
     } , [fetchData])
     
   return (
