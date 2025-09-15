@@ -11,12 +11,12 @@ export default function Overview() {
                 <div className='flex items-center justify-center rounded-3xl border border-white/20 p-1 text-gray-500/40'>
                     {['Temperature' , 'Humidity' , 'Rainfall'].map(item => {
                         return (
-                            <h3 className={`py-2 px-4 cursor-pointer transition-all ${activeChart === item ? 'text-gray-100 bg-zinc-800 rounded-xl' : 'text-gray-500/40 hover:text-zinc-100 cursor-pointer'}`} onClick={() => setActiveChart(item)}>{item}</h3>
+                            <h3 className={`py-2 px-4 cursor-pointer transition-all ${activeChart === item ? 'text-gray-100 bg-zinc-800 rounded-3xl' : 'text-gray-500/40 hover:text-zinc-100 cursor-pointer'}`} onClick={() => setActiveChart(item)}>{item}</h3>
                         )
                     })}
                 </div>
             </div>
-            <OverviewChart/>
+            <OverviewChart activeChart={activeChart} setActiveChart={setActiveChart}/>
         </div>
     </>
   )

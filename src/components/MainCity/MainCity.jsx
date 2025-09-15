@@ -13,7 +13,6 @@ export default function MainCity({city}) {
   const getDateFunc = () => {
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const dateObj = new Date()
-    console.log(fetchData)
     return `${dateObj.getDate()} ${months[dateObj.getMonth()]} ${dateObj.getFullYear()},`
   }
 
