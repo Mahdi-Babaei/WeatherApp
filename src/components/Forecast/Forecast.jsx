@@ -18,7 +18,7 @@ export default function Forecast({city}) {
                     <h2 className='font-NunitoBold text-3xl'>Next 7 Days</h2>
                     <span className='text-blue-400 font-NunitoSemibold text-lg cursor-pointer hover:text-blue-500 transition-all'>See All</span>
                 </div>
-                <div className='bg-gradient-to-t from-blue-500 via-blue-400  to-blue-300 -mx-5 px-5 py-7 rounded-3xl'>
+                <div className='bg-gradient-to-t from-blue-500 via-blue-400  to-blue-300 -mx-5 px-5 py-5 rounded-3xl'>
                     {fetchData.forecast.forecastday.slice(1 , 2).map(item => {
                         return (
                             <div className='grid grid-cols-3 text-xl  font-NunitoLight items-center'>

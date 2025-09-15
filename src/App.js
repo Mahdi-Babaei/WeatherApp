@@ -44,9 +44,9 @@ export default function App() {
                 </div>
               </div>
               <div className='grid grid-cols-4 gap-x-5 h-full'>
-                  <div className='col-span-1 flex flex-col gap-y-5 h-full'>
-                      <OtherCity />
-                      <OtherCity />
+                  <div className='col-span-1 grid grid-rows-3 gap-y-5'>
+                      <OtherCity city='Ardabil'/>
+                      <OtherCity city='Mashhad'/>
                       <AddCity />
                   </div>
                   <div className='col-span-3'>

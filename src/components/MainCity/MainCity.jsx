@@ -10,12 +10,19 @@ import useFetchData from '../../hooks/useFetchData';
 export default function MainCity({city}) {
   const {fetchData , isLoading} = useFetchData('current' , city)
 
+  const getDateFunc = () => {
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const dateObj = new Date()
+    console.log(fetchData)
+    return `${dateObj.getDate()} ${months[dateObj.getMonth()]} ${dateObj.getFullYear()},`
+  }
+
   return (
     <>
         {isLoading ? <p>Loading...</p> : !fetchData ? null : (
           <div className='rounded-3xl flex flex-col items-center justify-between bg-gradient-to-t from-blue-600 via-blue-400 to-blue-300 p-5 text-gray-100 overflow-hidden h-full'>
               <div className='flex flex-col mr-auto font-NunitoLight text-lg'>
-                <span>Today, {fetchData.location.localtime}</span>
+                <span>Today, {getDateFunc()} {fetchData.location.localtime.slice(-5)}</span>
                 <span>{fetchData.location.country}, {fetchData.location.name}</span>
               </div>
               <div className='flex flex-col items-center'>
