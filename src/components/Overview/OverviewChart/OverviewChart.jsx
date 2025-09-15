@@ -21,7 +21,7 @@ const data = [
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-gray-800 text-gray-50 p-2 rounded shadow border border-gray-700 font-NunitoLight">
+      <div className="bg-dark-secondary text-gray-100 p-2 rounded shadow border border-gray-700 font-NunitoLight">
         <p>{label}</p>
         <p>Temperature: {payload[0].value}°C</p>
       </div>
