@@ -7,8 +7,8 @@ import MainCityInfoBox from './MainCityInfoBox/MainCityInfoBox';
 import useFetchData from '../../hooks/useFetchData';
 
 
-export default function MainCity() {
-  const {fetchData , isLoading} = useFetchData('current' , 'zanjan')
+export default function MainCity({city}) {
+  const {fetchData , isLoading} = useFetchData('current' , city)
 
   return (
     <>

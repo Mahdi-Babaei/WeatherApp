@@ -5,6 +5,7 @@ import SearchBox from './components/SearchBox/SearchBox';
 import SidebarMenu from './components/SidebarMenu/SidebarMenu';
 import Theme from './components/Theme/Theme';
 import { ThemeContext } from './context/Theme';
+import { CityContext } from './context/City';
 import Notifications from './components/Notifications/Notifications';
 import User from './components/User/User';
 import Forecast from './components/Forecast/Forecast';
@@ -14,6 +15,7 @@ import Overview from './components/Overview/Overview';
 
 export default function App() {
   const {theme , setTheme} = useContext(ThemeContext)
+  const {city , setCity} = useContext(CityContext)
 
   return (
     <>
@@ -22,7 +24,7 @@ export default function App() {
           <div className='flex flex-col gap-y-5 w-full'>
               <div className='grid grid-cols-4 gap-x-5'>
                 <div className='col-span-1'>
-                    <MainCity/>
+                    <MainCity city={city}/>
                 </div>
                 <div className='col-span-3 flex flex-col gap-y-5'>
                     <div className='grid grid-cols-5 gap-x-8 items-center'>
@@ -36,7 +38,7 @@ export default function App() {
                       </div>
                     </div>
                     <div className='grid grid-cols-2 gap-5 w-full h-full'>
-                        <Forecast />
+                        <Forecast city={city}/>
                         <div className='bg-dark-secondary w-full h-full rounded-3xl'></div>
                     </div>
                 </div>
