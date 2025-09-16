@@ -1,7 +1,7 @@
 import React , {useContext} from "react";
 import {CityContext} from '../../../context/City'
 
-export default function SearchBoxModal({ fetchData }) {
+export default function SearchBoxModal({ fetchData , setIsSearchModalOpen}) {
     const {city , setCity} = useContext(CityContext)
     
   return (
@@ -11,7 +11,10 @@ export default function SearchBoxModal({ fetchData }) {
             <>
                 {fetchData.map((item) => {
                 return (
-                    <div className="rounded-xl p-4 cursor-pointer hover:bg-dark-primary/50 transition-all" onClick={() => setCity(item.name)}>
+                    <div className="rounded-xl p-4 cursor-pointer hover:bg-dark-primary/50 transition-all" onClick={() => {
+                        setCity(item.name)
+                        setIsSearchModalOpen(false)
+                    }}>
                     {item.country}, {item.name}
                     </div>
                 );
