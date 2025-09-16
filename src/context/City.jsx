@@ -4,9 +4,10 @@ export const CityContext = createContext()
 
 export default function CityProvider({children}) {
     const [city , setCity] = useState('zanjan')
+    const [favCities , setFavCities] = useState([])
 
   return (
-    <CityContext.Provider value={{city , setCity}}>
+    <CityContext.Provider value={{city , setCity , favCities , setFavCities}}>
         {children}
     </CityContext.Provider>
   )
