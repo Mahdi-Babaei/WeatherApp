@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import SearchBoxModal from './SearchBoxModal/SearchBoxModal';
 import useFetchData from '../../hooks/useFetchData';
+import Overlay from '../Overlay/Overlay';
 
 const regex = /^[A-Za-z\u0600-\u06FF]+(?:[ -][A-Za-z\u0600-\u06FF]+)*$/
 
@@ -22,6 +23,7 @@ export default function SearchBox() {
         </div>
         {isSearchModalOpen && <SearchBoxModal fetchData={fetchData}/>}
       </div>
+      <Overlay />
     </>
   )
 }
