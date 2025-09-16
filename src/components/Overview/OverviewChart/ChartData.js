@@ -18,7 +18,6 @@ export default function ChartData({setChartData}) {
     useEffect(() => {
         data = []
         !isLoading && fetchData && fetchData.forecast.forecastday.map(item => {
-            console.log(item)
             let newWeekDay = {
                 day: getWeekDayFunc(item.date) ,
                 temp: Math.round(item.day.avgtemp_c),
