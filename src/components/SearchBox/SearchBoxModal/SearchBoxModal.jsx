@@ -23,10 +23,14 @@ export default function SearchBoxModal({ fetchData , setIsSearchModalOpen , setS
                         }}>
                         {item.country}, {item.name}
                       </span>
-                      <span className="flex items-center text-blue-400 text-base hover:pr-1 transition-all" onClick={() => setFavCities(prev => {
-                        let setArray = new Set([...prev , item.url])
-                        return [...setArray]
-                      })}>
+                      <span className="flex items-center text-blue-400 text-base hover:pr-1 transition-all" onClick={() => {
+                          setFavCities(prev => {
+                            let setArray = new Set([...prev , item.url])
+                            return [...setArray]
+                          })
+                          setSearchBoxValue('')
+                          setIsSearchModalOpen(false)
+                        }}>
                         <GoPlus className="w-6 h-6"/>
                         Add to Favorites
                       </span>
