@@ -19,7 +19,7 @@ export default function OverviewChart ({ activeChart , setActiveChart }) {
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={chartData}
-          margin={{ top: 30, right: 20 , left: -10}} >
+          margin={{ top: 30, right: 20 , left: -5}} >
           <XAxis dataKey="day" stroke="var(--color-zinc-400)" />
           <YAxis unit={activeChart === 'Temperature' ? ' °C' : ' %'} domain={['auto', 'auto']} stroke="var(--color-zinc-400)" />
           <Tooltip content={<CustomTooltip activeChart={activeChart}/>} cursor={false} />
