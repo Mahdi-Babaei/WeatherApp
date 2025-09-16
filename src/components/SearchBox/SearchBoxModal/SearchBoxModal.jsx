@@ -1,12 +1,14 @@
 import React , {useContext} from "react";
 import {CityContext} from '../../../context/City'
+import 'animate.css';
+
 
 export default function SearchBoxModal({ fetchData , setIsSearchModalOpen , setSearchBoxValue}) {
     const {city , setCity} = useContext(CityContext)
     
   return (
     <>
-      <div className="rounded-2xl bg-dark-secondary mt-2 p-2 absolute z-10 text-xl font-NunitoSemibold w-full flex flex-col gap-y-1">
+      <div className="rounded-2xl bg-dark-secondary mt-2 p-2 absolute z-10 text-xl font-NunitoSemibold w-full flex flex-col gap-y-1 animate__animated animate__slideInUp">
         {fetchData.length ? (
             <>
                 {fetchData.map((item) => {
