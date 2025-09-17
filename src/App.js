@@ -12,10 +12,13 @@ import Forecast from './components/Forecast/Forecast';
 import OtherCity from './components/OtherCity/OtherCity';
 import AddCity from './components/AddCity/AddCity';
 import Overview from './components/Overview/Overview';
+import MoreInfo from './components/MoreInfo/MoreInfo';
 
 export default function App() {
   const {theme , setTheme} = useContext(ThemeContext)
   const {city , setCity , favCities} = useContext(CityContext)
+
+  
 
   return (
     <>
@@ -39,7 +42,7 @@ export default function App() {
                     </div>
                     <div className='grid grid-cols-2 gap-5 w-full h-full'>
                         <Forecast city={city}/>
-                        <div className='bg-dark-secondary w-full h-full rounded-3xl'></div>
+                        <MoreInfo />
                     </div>
                 </div>
               </div>
