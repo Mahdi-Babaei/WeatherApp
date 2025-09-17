@@ -42,7 +42,7 @@ export default function App() {
                     </div>
                     <div className='grid grid-cols-2 gap-5 w-full h-full'>
                         <Forecast city={city}/>
-                        <MoreInfo />
+                        <MoreInfo city={city}/>
                     </div>
                 </div>
               </div>
