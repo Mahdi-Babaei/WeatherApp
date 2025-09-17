@@ -3,6 +3,7 @@ import { BsSunrise } from "react-icons/bs";
 import { BsSunset } from "react-icons/bs";
 import { WiMoonset } from "react-icons/wi";
 import { WiMoonrise } from "react-icons/wi";
+import Slider from '@mui/material/Slider';
 
 
 export default function MoreInfo() {
@@ -30,16 +31,23 @@ export default function MoreInfo() {
                   <span className="font-NunitoSemibold">Moonset: 00:00</span>
               </div>
           </div>
-          <div className="grid grid-cols-2 text-center">
-            <div>
+          <div className="grid grid-cols-2 text-center gap-x-4">
+            <div className="flex flex-col gap-y-3">
               <h3 className="font-NunitoSemibold">Air Quality</h3>
-              <input type="range" className="w-3/4 "/>
+              <div className="relative w-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 h-3 rounded-full">
+                <span className="w-6 h-6 rounded-full bg-orange-500 border-2 block absolute -top-1.5 left-1/4"></span>
+              </div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, consectetur!</p>
             </div>
-            <div>
+            <div className="flex flex-col gap-y-3">
               <h3 className="font-NunitoSemibold">UV Index</h3>
-              <input type="range" className="w-3/4 "/>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, consectetur!</p>
+              <div className="relative w-full h-3 rounded-full" style={{background: 'linear-gradient(90deg,rgba(65, 176, 0, 1) 0%, rgba(250, 204, 0, 1) 25%, rgba(227, 106, 0, 1) 50%, rgba(255, 0, 0, 1) 75%, rgba(128, 0, 219, 1) 100%)'}}>
+                <span className="w-6 h-6 rounded-full bg-[#E36A00] border-2 block absolute -top-1.5 left-1/2 right-1/2 -translate-x-1/2"></span>
+              </div>
+              <div>
+                <h6>High</h6>
+                <p className="text-base">Reduce time in the sun, especially during midday. Take all precautions. </p>
+              </div>
             </div>
           </div>
       </div>
