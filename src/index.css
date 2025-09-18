@@ -273,11 +273,20 @@
   .left-4\/5 {
     left: calc(4/5 * 100%);
   }
+  .left-5 {
+    left: calc(var(--spacing) * 5);
+  }
+  .left-10 {
+    left: calc(var(--spacing) * 10);
+  }
   .left-11 {
     left: calc(var(--spacing) * 11);
   }
   .left-11\/12 {
     left: calc(11/12 * 100%);
+  }
+  .left-20 {
+    left: calc(var(--spacing) * 20);
   }
   .left-\[20\%\] {
     left: 20%;
@@ -642,8 +651,23 @@
       border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
     }
   }
+  .bg-\[\#41b000\] {
+    background-color: #41b000;
+  }
+  .bg-\[\#8000DB\] {
+    background-color: #8000DB;
+  }
   .bg-\[\#E36A00\] {
     background-color: #E36A00;
+  }
+  .bg-\[\#E36a00\] {
+    background-color: #E36a00;
+  }
+  .bg-\[\#facc00\] {
+    background-color: #facc00;
+  }
+  .bg-\[\#ff0000\] {
+    background-color: #ff0000;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -961,6 +985,10 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .duration-1000 {
+    --tw-duration: 1000ms;
+    transition-duration: 1000ms;
+  }
   .outline-none {
     --tw-outline-style: none;
     outline-style: none;
@@ -1274,6 +1302,10 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @keyframes ping {
   75%, 100% {
     transform: scale(2);
@@ -1328,6 +1360,7 @@
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
     }
   }
 }
