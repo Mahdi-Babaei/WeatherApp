@@ -30,9 +30,9 @@ export default function UV({city}) {
             className="relative w-full h-3 rounded-full"
             style={{
               background:
-                "linear-gradient(90deg,rgba(65, 176, 0, 1) 0%, rgba(250, 204, 0, 1) 25%, rgba(227, 106, 0, 1) 50%, rgba(255, 0, 0, 1) 75%, rgba(128, 0, 219, 1) 100%)",
+                "linear-gradient(90deg,var(--color-green-500) 0%, var(--color-yellow-500) 25%, var(--color-orange-500) 50%, var(--color-red-500) 75%, var(--color-purple-500) 100%)",
             }}>
-            <span style={{left: `${uvWidth}%`}} className={`transition-all duration-1000 w-6 h-6 rounded-full border-2 block absolute -top-1.5 ${uvWidth == 95 ? 'bg-[#8000DB]' : uvWidth >= 75 ? 'bg-[#ff0000]' : uvWidth >= 50 ? 'bg-[#E36a00]' : uvWidth >= 25 ? 'bg-[#facc00]' : 'bg-[#41b000]'} `}></span>
+            <span style={{left: `${uvWidth}%`}} className={`transition-all duration-1000 w-6 h-6 rounded-full border-2 block absolute -top-1.5 ${uvWidth == 95 ? 'bg-purple-500' : uvWidth >= 75 ? 'bg-red-500' : uvWidth >= 50 ? 'bg-orange-500' : uvWidth >= 25 ? 'bg-yellow-500' : 'bg-green-500'} `}></span>
           </div>
           <div>
             <h6>{uvWidth < 25 ? UVconditions[0].title : uvWidth < 50 ? UVconditions[1].title : uvWidth < 75 ? UVconditions[2].title : uvWidth < 95 ? UVconditions[3].title : UVconditions[4].title}</h6>
