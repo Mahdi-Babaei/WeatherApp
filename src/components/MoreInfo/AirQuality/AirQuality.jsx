@@ -27,8 +27,8 @@ export default function AirQuality({city}) {
         <div className="flex flex-col gap-y-3">
           <h3 className="font-NunitoSemibold">Air Quality</h3>
           <div className={`relative w-full h-3 rounded-full ${width == 100 ? 'bg-green-300/70' : width >= 60 ? 'bg-yellow-300/70' : width >= 20 ? 'bg-orange-300/70' : 'bg-red-300/70' }`}>
-            <span style={{width: `${width}%`}}  className={`h-3 rounded-full block absolute top-0 ${width == 100 ? 'bg-green-500' : width >= 60 ? 'bg-yellow-500' : width >= 20 ? 'bg-orange-500' : 'bg-red-500' }`}></span>
-            <span style={{left: `${width - 5}%`}}  className={`w-6 h-6 rounded-full border-2 block absolute -top-1.5 ${width == 100 ? 'bg-green-500' : width >= 60 ? 'bg-yellow-500' : width >= 20 ? 'bg-orange-500' : 'bg-red-500' }`}></span>
+            <span style={{width: `${width}%`}}  className={`transition-all duration-1000  h-3 rounded-full block absolute top-0 ${width == 100 ? 'bg-green-500' : width >= 60 ? 'bg-yellow-500' : width >= 20 ? 'bg-orange-500' : 'bg-red-500' }`}></span>
+            <span style={{left: `${width - 5}%`}}  className={`transition-all duration-1000  w-6 h-6 rounded-full border-2 block absolute -top-1.5 ${width == 100 ? 'bg-green-500' : width >= 60 ? 'bg-yellow-500' : width >= 20 ? 'bg-orange-500' : 'bg-red-500' }`}></span>
           </div>
           <div>
             <h6 className="line-clamp-1">{AQconditions.filter(item => item.epaIndex === fetchData.current.air_quality['us-epa-index'])[0].title}</h6>
