@@ -49,6 +49,7 @@ export default function App() {
               <div className='grid grid-cols-4 gap-x-5 h-full'>
                   <div className='col-span-1 grid grid-rows-3 gap-y-5'>
                     {favCities.length && favCities.length < 4 ? favCities.toReversed().map(cityUrl => <OtherCity city={cityUrl}/>) : favCities.length > 3 ? favCities.toReversed().slice(0 , ((favCities.length - 3) * -1)).map(cityUrl => <OtherCity city={cityUrl}/>) : <AddCity />}
+                    {favCities.length >= 3 ? '' : <AddCity />}
                   </div>
                   <div className='col-span-3'>
                       <Overview />

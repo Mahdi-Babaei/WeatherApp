@@ -25,7 +25,7 @@ export default function SidebarMenu() {
         <div className='h-full w-fit flex flex-col items-center divide-y divide-gray-300 dark:divide-gray-700  bg-light-secondary dark:bg-dark-secondary rounded-2xl shadow-xs p-4 text-gray-900 dark:text-zinc-100'>
             <a href='#' className='flex flex-col items-center pb-4'>
                 <img src='/images/logo.png' className='w-9 h-9 object-cover'/>
-                <span className='text-sm'>Weather</span>
+                <span className='text-sm font-NunitoSemibold'>Weather</span>
             </a>
             <div className='flex flex-col gap-y-8 items-center py-8 w-full'>
                 {menuItems.map(item => {
