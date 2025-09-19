@@ -15,7 +15,7 @@ export default function SearchBoxModal({ fetchData , setIsSearchModalOpen , setS
             <>
                 {fetchData.map((item) => {
                 return (
-                    <div className="rounded-xl p-4 cursor-pointer hover:bg-dark-primary/50 transition-all flex items-center justify-between">
+                    <div className="rounded-xl p-4 cursor-pointer hover:bg-light-primary dark:hover:bg-dark-primary/50 transition-all flex items-center justify-between">
                       <span className="max-w-2/3"  onClick={() => {
                           setSearchBoxValue('')
                           setCity(item.name)

@@ -7,7 +7,7 @@ export default function OtherCity({city}) {
   return (
     <>
       {isLoading ? <p>Loading...</p> : !fetchData ? null : (
-        <div className='grid grid-cols-3 items-center  bg-dark-secondary rounded-3xl px-5'>
+        <div className='grid grid-cols-3 items-center  bg-light-secondary dark:bg-dark-secondary rounded-3xl px-5 shadow-sm'>
             <img src={fetchData.current.condition.icon} className='w-20 h-20'/>
             <div>
                 <h3 className='font-NunitoRegular text-xl'>{fetchData.location.name}</h3>
