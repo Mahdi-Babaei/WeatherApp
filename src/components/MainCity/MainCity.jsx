@@ -20,7 +20,7 @@ export default function MainCity({city}) {
   return (
     <>
         {isLoading ? <p>Loading...</p> : !fetchData ? null : (
-          <div className='rounded-3xl flex flex-col items-center justify-between bg-gradient-to-t from-blue-600 via-blue-400 to-blue-300 p-5 text-gray-100 overflow-hidden h-full'>
+          <div className={`rounded-3xl flex flex-col items-center justify-between bg-gradient-to-t ${fetchData.current.is_day ? 'from-blue-600 via-vlue-400 to-blue-300' : 'from-gray-950 via-blue-950 to-blue-800'}  p-5 text-gray-100 overflow-hidden h-full`}>
               <div className='flex flex-col mr-auto font-NunitoLight text-lg'>
                 <span>Today, {getDateFunc()} {fetchData.location.localtime.slice(-5)}</span>
                 <span>{fetchData.location.country}, {fetchData.location.name}</span>
