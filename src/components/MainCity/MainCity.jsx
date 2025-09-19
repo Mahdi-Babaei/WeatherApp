@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { PiWind } from "react-icons/pi";
 import { PiDropLight } from "react-icons/pi";
 import { PiEye } from "react-icons/pi";
-
 import MainCityInfoBox from './MainCityInfoBox/MainCityInfoBox';
 import useFetchData from '../../hooks/useFetchData';
+import { GoArrowUp } from "react-icons/go";
+
 
 
 export default function MainCity({city}) {
@@ -25,9 +26,18 @@ export default function MainCity({city}) {
                 <span>{fetchData.location.country}, {fetchData.location.name}</span>
               </div>
               <div className='flex flex-col items-center'>
-                <span className='font-NunitoLight text-xl'>{fetchData.current.condition.text}</span>
-                <span className='text-[116px] leading-[0.8] font-NunitoBold text-transparent bg-gradient-to-b from-white via-white/70 to-white/5 bg-clip-text'>{Math.round(fetchData.current.temp_c)}°</span>
-                <img src='/images/weather-status/mostly_clear.png' alt="" className='w-52 h-52 -mt-20'/>
+                <div className='flex items-center'>
+                  <img src={fetchData.current.condition.icon} alt="" className='w-16 h-16'/>
+                  <span className='font-NunitoLight text-xl -ml-1'>{fetchData.current.condition.text}</span>
+                </div>
+                <span className='text-9xl font-NunitoBold -mt-4'>{Math.round(fetchData.current.temp_c)}</span>
+                <div className='font-NunitoLight text-lg'>
+                  <div className='flex items-center justify-center gap-x-2 -ml-2'>
+                    <span className='flex items-center'><GoArrowUp className='w-6 h-6'/>42°</span>
+                    <span className='flex items-center'><GoArrowUp className='w-6 h-6 rotate-180'/>20°</span>
+                  </div>
+                  <span>Feels like 25°</span>
+                </div>
               </div>
               <div className='flex items-center w-full justify-around'>
                 <MainCityInfoBox title='Wind' data={Math.round(fetchData.current.wind_kph)} unit='km / h' icon={<PiWind className='w-8 h-8'/>}/>
