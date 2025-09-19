@@ -4,7 +4,7 @@ import { GoBell } from "react-icons/go";
 export default function Notifications() {
   return (
     <>
-        <div className='w-12 h-12 rounded-full bg-dark-secondary flex items-center justify-center text-gray-100 cursor-pointer'>
+        <div className='w-12 h-12 rounded-full bg-light-secondary dark:bg-dark-secondary flex items-center justify-center text-black dark:text-zinc-100 cursor-pointer shadow-sm'>
             <div className='w-7 h-7 relative'>
                 <GoBell className='w-full h-full'/>
                 <div className='absolute top-0 -right-1'>
