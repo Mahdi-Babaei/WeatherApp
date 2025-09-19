@@ -10,6 +10,7 @@
     --color-red-300: oklch(80.8% 0.114 19.571);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-red-800: oklch(44.4% 0.177 26.899);
     --color-orange-300: oklch(83.7% 0.128 66.29);
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
@@ -26,6 +27,7 @@
     --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-purple-500: oklch(62.7% 0.265 303.9);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -553,8 +555,20 @@
     --tw-border-style: none;
     border-style: none;
   }
+  .border-black {
+    border-color: var(--color-black);
+  }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
   .border-gray-400 {
     border-color: var(--color-gray-400);
+  }
+  .border-gray-500 {
+    border-color: var(--color-gray-500);
   }
   .border-gray-600 {
     border-color: var(--color-gray-600);
@@ -633,6 +647,9 @@
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
+  }
+  .bg-red-800 {
+    background-color: var(--color-red-800);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -788,6 +805,9 @@
     --tw-tracking: var(--tracking-wider);
     letter-spacing: var(--tracking-wider);
   }
+  .text-black {
+    color: var(--color-black);
+  }
   .text-blue-300 {
     color: var(--color-blue-300);
   }
@@ -896,6 +916,13 @@
       }
     }
   }
+  .hover\:text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black);
+      }
+    }
+  }
   .hover\:text-blue-500 {
     &:hover {
       @media (hover: hover) {
@@ -945,6 +972,16 @@
       background-color: var(--color-dark-secondary);
     }
   }
+  .dark\:bg-light-secondary {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-light-secondary);
+    }
+  }
+  .dark\:bg-zinc-800 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-zinc-800);
+    }
+  }
   .dark\:text-gray-100 {
     &:where(.dark, .dark *) {
       color: var(--color-gray-100);
@@ -960,6 +997,15 @@
       &:hover {
         @media (hover: hover) {
           color: var(--color-gray-100);
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-zinc-100 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-zinc-100);
         }
       }
     }
