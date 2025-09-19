@@ -22,7 +22,7 @@ export default function SearchBox() {
   return (
     <> 
       <div className='relative z-30 '>
-        <div className='rounded-2xl p-4 flex items-center gap-x-1 bg-dark-secondary text-gray-100 h-12 font-NunitoLight tracking-wider w-full' onClick={() => setIsSearchModalOpen(true)}>
+        <div className='rounded-2xl p-4 flex items-center gap-x-1 bg-light-secondary shadow-sm dark:bg-dark-secondary text-gray-900 dark:text-zinc-100 h-12 font-NunitoLight tracking-wider w-full' onClick={() => setIsSearchModalOpen(true)}>
             <CiSearch className='w-7 h-7 cursor-pointer'/>
             <input ref={inputElem} type="text" placeholder='Search City ...' className='w-full placeholder:text-gray-500 placeholder:font-NunitoLight border-none outline-none' value={searchBoxValue} onChange={(e) => setSearchBoxValue(e.target.value)}/>
         </div>

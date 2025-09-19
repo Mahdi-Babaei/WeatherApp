@@ -10,7 +10,7 @@ export default function SearchBoxModal({ fetchData , setIsSearchModalOpen , setS
   return (
     <>
 
-      <div className="rounded-2xl bg-dark-secondary mt-2 p-2 absolute z-10 text-xl font-NunitoSemibold w-full flex flex-col gap-y-1 animate__animated animate__slideInUp">
+      <div className="rounded-2xl bg-light-secondary dark:bg-dark-secondary mt-2 p-2 absolute z-10 text-xl font-NunitoSemibold w-full flex flex-col gap-y-1 animate__animated animate__slideInUp">
         {fetchData.length ? (
             <>
                 {fetchData.map((item) => {
