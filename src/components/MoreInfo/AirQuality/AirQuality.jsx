@@ -31,7 +31,7 @@ export default function AirQuality({city}) {
             <span style={{left: `${width - 5}%`}}  className={`transition-all duration-1000  w-6 h-6 rounded-full border-2 block absolute -top-1.5 ${width == 100 ? 'bg-green-500' : width >= 60 ? 'bg-yellow-500' : width >= 20 ? 'bg-orange-500' : 'bg-red-500' }`}></span>
           </div>
           <div>
-            <h6 className="line-clamp-1">{AQconditions.filter(item => item.epaIndex === fetchData.current.air_quality['us-epa-index'])[0].title}</h6>
+            <h6 className={`line-clamp-1 font-NunitoSemibold ${width == 100 ? 'text-green-500' : width >= 60 ? 'text-yellow-500' : width >= 20 ? 'text-orange-500' : 'text-red-500' }`}>{AQconditions.filter(item => item.epaIndex === fetchData.current.air_quality['us-epa-index'])[0].title}</h6>
             <p className="text-base h-18">{AQconditions.filter(item => item.epaIndex === fetchData.current.air_quality['us-epa-index'])[0].desc}</p>
           </div>
         </div>

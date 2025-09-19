@@ -35,7 +35,7 @@ export default function UV({city}) {
             <span style={{left: `${uvWidth}%`}} className={`transition-all duration-1000 w-6 h-6 rounded-full border-2 block absolute -top-1.5 ${uvWidth == 95 ? 'bg-purple-500' : uvWidth >= 75 ? 'bg-red-500' : uvWidth >= 50 ? 'bg-orange-500' : uvWidth >= 25 ? 'bg-yellow-500' : 'bg-green-500'} `}></span>
           </div>
           <div>
-            <h6>{uvWidth < 25 ? UVconditions[0].title : uvWidth < 50 ? UVconditions[1].title : uvWidth < 75 ? UVconditions[2].title : uvWidth < 95 ? UVconditions[3].title : UVconditions[4].title}</h6>
+            <h6 className={`font-NunitoSemibold ${uvWidth == 95 ? 'text-purple-500' : uvWidth >= 75 ? 'text-red-500' : uvWidth >= 50 ? 'text-orange-500' : uvWidth >= 25 ? 'text-yellow-500' : 'text-green-500'}`}>{uvWidth < 25 ? UVconditions[0].title : uvWidth < 50 ? UVconditions[1].title : uvWidth < 75 ? UVconditions[2].title : uvWidth < 95 ? UVconditions[3].title : UVconditions[4].title}</h6>
             <p className="text-base h-18">{uvWidth < 25 ? UVconditions[0].desc : uvWidth < 50 ? UVconditions[1].desc : uvWidth < 75 ? UVconditions[2].desc : uvWidth < 95 ? UVconditions[3].desc : UVconditions[4].desc}</p>
           </div>
         </div>
