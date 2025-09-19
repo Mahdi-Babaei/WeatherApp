@@ -818,6 +818,9 @@
       color: color-mix(in oklab, var(--color-white) 70%, transparent);
     }
   }
+  .text-zinc-100 {
+    color: var(--color-zinc-100);
+  }
   .text-zinc-500 {
     color: var(--color-zinc-500);
   }
