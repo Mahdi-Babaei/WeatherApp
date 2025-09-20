@@ -28,7 +28,7 @@ export default function SearchBox() {
         </div>
         {isSearchModalOpen && <SearchBoxModal fetchData={fetchData} setIsSearchModalOpen={setIsSearchModalOpen} setSearchBoxValue={setSearchBoxValue}/>}
       </div>
-      {isSearchModalOpen && <Overlay setIsSearchModalOpen={setIsSearchModalOpen}/>}
+      {isSearchModalOpen && <Overlay setIsSearchModalOpen={setIsSearchModalOpen} setSearchBoxValue={setSearchBoxValue}/>}
     </>
   )
 }
