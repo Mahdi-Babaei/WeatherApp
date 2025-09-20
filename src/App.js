@@ -22,14 +22,14 @@ export default function App() {
 
   return (
     <>
-      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} 2xl:p-10 flex gap-x-5 select-none dark:text-gray-100 `}>
+      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} p-4 2xl:p-10 flex gap-x-5 select-none dark:text-gray-100 `}>
           <SidebarMenu />
-          <div className='2xl:flex flex-col gap-y-5 w-full hidden'>
-              <div className='grid grid-cols-4 gap-x-5'>
-                <div className='col-span-1'>
+          <div className='flex flex-col gap-y-5 w-full mt-20 2xl:mt-auto'>
+              <div className='grid grid-cols-1 2xl:grid-cols-4 gap-5'>
+                <div className='2xl:col-span-1'>
                     <MainCity city={city}/>
                 </div>
-                <div className='col-span-3 flex flex-col gap-y-5'>
+                <div className='2xl:col-span-3 2xl:flex flex-col gap-y-5 hidden'>
                     <div className='grid grid-cols-5 gap-x-8 items-center'>
                       <div className='col-span-2'>
                         <SearchBox />
@@ -46,7 +46,7 @@ export default function App() {
                     </div>
                 </div>
               </div>
-              <div className='grid grid-cols-4 gap-x-5 h-full'>
+              <div className='hidden 2xl:grid grid-cols-4 gap-x-5 h-full'>
                   <div className='col-span-1 grid grid-rows-3 gap-y-5'>
                     {favCities.length && favCities.length < 4 ? favCities.toReversed().map(cityUrl => <OtherCity city={cityUrl}/>) : favCities.length > 3 ? favCities.toReversed().slice(0 , ((favCities.length - 3) * -1)).map(cityUrl => <OtherCity city={cityUrl}/>) : <AddCity />}
                     {favCities.length >= 3 ? '' : <AddCity />}

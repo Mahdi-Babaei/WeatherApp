@@ -281,6 +281,9 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
   .mt-auto {
     margin-top: auto;
   }
@@ -437,6 +440,9 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -942,14 +948,49 @@
       display: flex;
     }
   }
+  .\32 xl\:col-span-1 {
+    @media (width >= 96rem) {
+      grid-column: span 1 / span 1;
+    }
+  }
+  .\32 xl\:col-span-3 {
+    @media (width >= 96rem) {
+      grid-column: span 3 / span 3;
+    }
+  }
+  .\32 xl\:mt-auto {
+    @media (width >= 96rem) {
+      margin-top: auto;
+    }
+  }
   .\32 xl\:flex {
     @media (width >= 96rem) {
       display: flex;
     }
   }
+  .\32 xl\:grid {
+    @media (width >= 96rem) {
+      display: grid;
+    }
+  }
   .\32 xl\:hidden {
     @media (width >= 96rem) {
       display: none;
+    }
+  }
+  .\32 xl\:grid-cols-4 {
+    @media (width >= 96rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .\32 xl\:gap-y-0 {
+    @media (width >= 96rem) {
+      row-gap: calc(var(--spacing) * 0);
+    }
+  }
+  .\32 xl\:rounded-3xl {
+    @media (width >= 96rem) {
+      border-radius: var(--radius-3xl);
     }
   }
   .\32 xl\:p-10 {
