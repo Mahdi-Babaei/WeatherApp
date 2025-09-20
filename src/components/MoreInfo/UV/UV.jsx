@@ -25,7 +25,7 @@ export default function UV({city}) {
     <>
       {isLoading ? <p>Loading ...</p> : !fetchData ? null : (
         <div className="flex flex-col gap-y-3">
-          <h3 className="font-NunitoSemibold">UV Index</h3>
+          <h3 className="font-NunitoSemibold text-lg">UV Index</h3>
           <div
             className="relative w-full h-3 rounded-full"
             style={{

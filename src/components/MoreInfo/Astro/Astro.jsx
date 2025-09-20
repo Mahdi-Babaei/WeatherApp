@@ -15,22 +15,22 @@ export default function Astro({city}) {
       <>
         {/* Sun */}
         <div className="flex items-center justify-between">
-            <div className="flex gap-x-2 items-center">
+            <div className="flex flex-col 2xl:flex-row gap-x-2 items-center">
             <BsSunrise className="w-12 h-12" />
             <span className="font-NunitoSemibold">Sunrise: {fetchData.astronomy.astro.sunrise}</span>
             </div>
-            <div className="flex gap-x-2 items-center">
+            <div className="flex flex-col 2xl:flex-row gap-x-2 items-center">
             <BsSunset className="w-12 h-12" />
             <span className="font-NunitoSemibold">Sunset: {fetchData.astronomy.astro.sunset}</span>
             </div>
         </div>
         {/* Moon */}
         <div className="flex items-center justify-between">
-            <div className="flex gap-x-2 items-center">
+            <div className="flex flex-col 2xl:flex-row gap-x-2 items-center">
             <WiMoonrise className="w-12 h-12" />
             <span className="font-NunitoSemibold">Moonrise: {fetchData.astronomy.astro.moonrise}</span>
             </div>
-            <div className="flex gap-x-2 items-center">
+            <div className="flex flex-col 2xl:flex-row gap-x-2 items-center">
             <WiMoonset className="w-12 h-12" />
             <span className="font-NunitoSemibold">Moonset: {fetchData.astronomy.astro.moonset}</span>
             </div>
