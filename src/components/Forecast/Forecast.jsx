@@ -23,9 +23,9 @@ export default function Forecast({city}) {
                         return (
                             <div className='grid grid-cols-3 text-base 2xl:text-xl  font-NunitoLight items-center'>
                                 <h4 className='font-NunitoSemibold text-left'>Tommorow</h4>
-                                <div className="flex items-center gap-x-2 mx-auto sm:mx-0">
+                                <div className="flex items-center gap-x-2 mx-auto sm:mx-0 md:mx-auto lg:mx-0">
                                     <img src={item.day.condition.icon} alt="" className='w-10 h-10'/>
-                                    <h5 className='sm:line-clamp-1 hidden'>{item.day.condition.text}</h5>
+                                    <h5 className='hidden sm:line-clamp-1  md:hidden lg:line-clamp-1'>{item.day.condition.text}</h5>
                                 </div>
                                 <h6 className='text-right'>{Math.round(item.day.maxtemp_c)}° / {Math.round(item.day.mintemp_c)}°</h6>
                             </div>
@@ -38,9 +38,9 @@ export default function Forecast({city}) {
                         return (
                             <div className='grid grid-cols-3 text-base 2xl:text-xl font-NunitoLight items-center'>
                                 <h4 className='font-NunitoSemibold text-left'>{getWeekDayFunc(item.date)}</h4>
-                                <div className="flex items-center gap-x-2 mx-auto sm:mx-0">
+                                <div className="flex items-center gap-x-2 mx-auto sm:mx-0 md:mx-auto lg:mx-0">
                                     <img src={item.day.condition.icon} alt="" className='w-10 h-10'/>
-                                    <h5 className='sm:line-clamp-1 hidden'>{item.day.condition.text}</h5>
+                                    <h5 className='hidden sm:line-clamp-1  md:hidden lg:line-clamp-1'>{item.day.condition.text}</h5>
                                 </div>
                                 <h6 className='text-right'>{Math.round(item.day.maxtemp_c)}° / {Math.round(item.day.mintemp_c)}°</h6>
                             </div>

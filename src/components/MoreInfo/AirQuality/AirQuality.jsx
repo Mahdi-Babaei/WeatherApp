@@ -32,7 +32,7 @@ export default function AirQuality({city}) {
           </div>
           <div>
             <h6 className={`line-clamp-1 font-NunitoSemibold ${width == 100 ? 'text-green-500' : width >= 60 ? 'text-yellow-500' : width >= 20 ? 'text-orange-500' : 'text-red-500' }`}>{AQconditions.filter(item => item.epaIndex === fetchData.current.air_quality['us-epa-index'])[0].title}</h6>
-            <p className="text-base h-18">{AQconditions.filter(item => item.epaIndex === fetchData.current.air_quality['us-epa-index'])[0].desc}</p>
+            <p className="text-base h-18 line-clamp-3">{AQconditions.filter(item => item.epaIndex === fetchData.current.air_quality['us-epa-index'])[0].desc}</p>
           </div>
         </div>
       )}

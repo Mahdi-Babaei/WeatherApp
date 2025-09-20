@@ -21,15 +21,15 @@ export default function Mobile({favCities , city}) {
             <User />
         </div>
         <div className='flex flex-col gap-y-5 w-full mt-20'>
-            <div className='grid grid-cols-1 gap-y-5'>
-                <SearchBox />
+            <SearchBox />
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                 <MainCity city={city}/>
                 <div className='grid grid-rows-3 gap-y-5'>
                    {favCities.length && favCities.length < 4 ? favCities.toReversed().map(cityUrl => <OtherCity city={cityUrl}/>) : favCities.length > 3 ? favCities.toReversed().slice(0 , ((favCities.length - 3) * -1)).map(cityUrl => <OtherCity city={cityUrl}/>) : <AddCity />}
                    {favCities.length >= 3 ? '' : <AddCity />}
                 </div>
             </div>
-            <div className='grid grid-cols-1 gap-y-5 h-full'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-5 h-full'>
                 <Forecast city={city}/>
                 <MoreInfo city={city}/>
                 <Overview />
