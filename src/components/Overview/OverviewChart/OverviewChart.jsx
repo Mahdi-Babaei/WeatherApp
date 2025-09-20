@@ -6,7 +6,7 @@ import ChartData from "./ChartData";
 export default function OverviewChart ({ activeChart , setActiveChart }) {
   const [chartData , setChartData] = useState([])
   return (
-    <div className="w-full h-full select-none">
+    <div className="w-full h-80 select-none">
       <ChartData setChartData={setChartData}/>
       <style>
         {`
@@ -21,7 +21,7 @@ export default function OverviewChart ({ activeChart , setActiveChart }) {
           data={chartData}
           margin={{ top: 30, right: 20 , left: -5}} >
           <XAxis dataKey="day" stroke="var(--color-zinc-400)" />
-          <YAxis unit={activeChart === 'Temperature' ? ' °C' : ' %'} domain={['auto', 'auto']} stroke="var(--color-zinc-400)" />
+          <YAxis unit={activeChart === 'Temperature' ? ' °C' : ' %'} domain={['dataMin', 'dataMax + 5']} stroke="var(--color-zinc-400)" />
           <Tooltip content={<CustomTooltip activeChart={activeChart}/>} cursor={false} />
           <Legend verticalAlign="top"/>
           <Line

@@ -26,14 +26,12 @@ export default function Mobile({favCities , city}) {
             <div className='grid grid-cols-1 gap-y-5 h-full'>
                 <Forecast city={city}/>
                 <MoreInfo city={city}/>
+                <Overview />
             </div>
         </div>
     </>
   )
 }
-{/* <div className='col-span-3'>
-    <Overview />
-</div> */}
 
 {/* <div className='col-span-3 flex flex-col gap-y-5'>
     <div className='grid grid-cols-5 gap-x-8 items-center'>
@@ -45,9 +43,5 @@ export default function Mobile({favCities , city}) {
         <Notifications />
         <User />
       </div>
-    </div>
-    <div className='grid grid-cols-2 gap-5 w-full h-full'>
-        <Forecast city={city}/>
-        <MoreInfo city={city}/>
     </div>
 </div> */}
