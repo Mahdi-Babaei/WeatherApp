@@ -14,7 +14,7 @@ export default function Astro({city}) {
       {isLoading ? <p>Loading...</p> : !fetchData ? null : (
       <>
         {/* Sun */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between sm:justify-around">
             <div className="flex flex-col 2xl:flex-row gap-x-2 items-center">
             <BsSunrise className="w-12 h-12" />
             <span className="font-NunitoSemibold">Sunrise: {fetchData.astronomy.astro.sunrise}</span>
@@ -25,7 +25,7 @@ export default function Astro({city}) {
             </div>
         </div>
         {/* Moon */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between sm:justify-around">
             <div className="flex flex-col 2xl:flex-row gap-x-2 items-center">
             <WiMoonrise className="w-12 h-12" />
             <span className="font-NunitoSemibold">Moonrise: {fetchData.astronomy.astro.moonrise}</span>
