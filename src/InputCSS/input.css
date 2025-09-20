@@ -33,5 +33,7 @@
     --font-NunitoSemibold: 'NunitoSemibold';
     --font-NunitoBold: 'NunitoBold';
 
+    --breakpoint-xs: 24.375rem;
+
 
 }

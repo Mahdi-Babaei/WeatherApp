@@ -22,9 +22,9 @@ export default function App() {
 
   return (
     <>
-      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} p-10 flex gap-x-5 select-none dark:text-gray-100 `}>
+      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} 2xl:p-10 flex gap-x-5 select-none dark:text-gray-100 `}>
           <SidebarMenu />
-          <div className='flex flex-col gap-y-5 w-full'>
+          <div className='2xl:flex flex-col gap-y-5 w-full hidden'>
               <div className='grid grid-cols-4 gap-x-5'>
                 <div className='col-span-1'>
                     <MainCity city={city}/>
