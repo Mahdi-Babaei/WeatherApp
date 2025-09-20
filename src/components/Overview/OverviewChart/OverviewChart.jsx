@@ -6,7 +6,7 @@ import ChartData from "./ChartData";
 export default function OverviewChart ({ activeChart , setActiveChart }) {
   const [chartData , setChartData] = useState([])
   return (
-    <div className="w-full h-80 select-none">
+    <div className="w-full h-80 xl:h-full select-none">
       <ChartData setChartData={setChartData}/>
       <style>
         {`

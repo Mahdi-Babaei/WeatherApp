@@ -14,8 +14,8 @@ import MoreInfo from '../components/MoreInfo/MoreInfo';
 export default function Desktop({favCities , city}) {
   return (
     <>
-        <SidebarMenu />
-        <div className='flex flex-col gap-y-5 w-full'>
+        {/* <SidebarMenu /> */}
+        <div className='flex flex-col gap-y-5 w-full '>
             <div className='grid grid-cols-4 gap-x-5'>
               <div className='col-span-1'>
                   <MainCity city={city}/>

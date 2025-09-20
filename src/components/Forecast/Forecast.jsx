@@ -13,7 +13,7 @@ export default function Forecast({city}) {
   return (
     <>
         {isLoading ? <p>Loading ...</p> : !fetchData ? null : (
-            <div className='bg-light-secondary dark:bg-dark-secondary rounded-xl 2xl:rounded-3xl flex flex-col justify-between gap-y-5 py-5 px-4 2xl:px-8 h-full relative shadow-sm'>
+            <div className='bg-light-secondary dark:bg-dark-secondary rounded-xl xl:rounded-3xl flex flex-col justify-between gap-y-5 py-5 px-4 2xl:px-8 h-full relative shadow-sm'>
                 <div className='flex justify-between items-center'>
                     <h2 className='font-NunitoBold text-3xl'>Next 7 Days</h2>
                     <span className='text-blue-400 font-NunitoSemibold text-lg cursor-pointer hover:text-blue-500 transition-all'>See All</span>
