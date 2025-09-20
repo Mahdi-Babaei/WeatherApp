@@ -38,6 +38,7 @@ export default function SidebarMenu() {
                 <TbLogout className='w-7 h-7 flex items-center justify-center'/>
             </div>
         </div>
+        {/* Responsive */}
         <div className='bg-light-secondary dark:bg-dark-secondary h-20 absolute top-0 left-0 w-full xs:flex 2xl:hidden flex-row-reverse items-center px-5 justify-between'>
             <RxHamburgerMenu className='w-8 h-8'/>
             <a href='#' className='flex items-center gap-x-2'>
