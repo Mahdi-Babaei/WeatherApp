@@ -22,9 +22,9 @@ export default function App() {
 
   return (
     <>
-      <div className={`h-screen bg-light-primary dark:bg-dark-primary ${theme} p-4 2xl:p-10 flex gap-x-5 select-none dark:text-gray-100 `}>
+      <div className={`h-full 2xl:h-screen bg-light-primary dark:bg-dark-primary ${theme} p-4 2xl:p-10 flex gap-x-5 select-none dark:text-gray-100 `}>
           <SidebarMenu />
-          <div className='flex flex-col gap-y-5 w-full mt-20 2xl:mt-auto'>
+          <div className='flex flex-col gap-y-5 w-full mt-20 2xl:mt-0'>
               <div className='grid grid-cols-1 2xl:grid-cols-4 gap-5'>
                 <div className='2xl:col-span-1'>
                     <MainCity city={city}/>
@@ -44,6 +44,10 @@ export default function App() {
                         <Forecast city={city}/>
                         <MoreInfo city={city}/>
                     </div>
+                </div>
+                <div className='2xl:col-span-1 grid 2xl:hidden grid-rows-3 gap-y-5'>
+                    {favCities.length && favCities.length < 4 ? favCities.toReversed().map(cityUrl => <OtherCity city={cityUrl}/>) : favCities.length > 3 ? favCities.toReversed().slice(0 , ((favCities.length - 3) * -1)).map(cityUrl => <OtherCity city={cityUrl}/>) : <AddCity />}
+                    {favCities.length >= 3 ? '' : <AddCity />}
                 </div>
               </div>
               <div className='hidden 2xl:grid grid-cols-4 gap-x-5 h-full'>
