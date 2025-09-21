@@ -9,6 +9,8 @@ import OtherCity from '../components/OtherCity/OtherCity';
 import AddCity from '../components/AddCity/AddCity';
 import Overview from '../components/Overview/Overview';
 import MoreInfo from '../components/MoreInfo/MoreInfo';
+import Social from '../components/Social/Social';
+
 
 export default function Mobile({favCities , city}) {
   return (
@@ -34,6 +36,7 @@ export default function Mobile({favCities , city}) {
                 <MoreInfo city={city}/>
                 <Overview />
             </div>
+            <Social/>
         </div>
     </>
   )
