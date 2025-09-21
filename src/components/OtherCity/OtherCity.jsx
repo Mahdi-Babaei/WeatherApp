@@ -14,7 +14,7 @@ export default function OtherCity({city}) {
             <img src={fetchData.current.condition.icon} className='w-20 h-20 md:w-24 md:h-24 xl:h-20 xl:w-20'/>
             <div className='text-center md:text-left lg:text-center xl:text-left'>
                 <h3 className='font-NunitoRegular text-xl line-clamp-2'>{fetchData.location.name}</h3>
-                <span className='font-NunitoLight tracking-wide'>{fetchData.current.condition.text}</span>
+                <span className='font-NunitoLight tracking-wide line-clamp-2'>{fetchData.current.condition.text}</span>
             </div>
             <h2 className='text-6xl md:text-7xl xl:text-6xl 2xl:text-7xl font-NunitoBold text-right'>{Math.round(grade === 'c' ? fetchData.current.temp_c : fetchData.current.temp_f)}°</h2>
         </div>

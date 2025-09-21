@@ -6,6 +6,7 @@ import MainCityInfoBox from './MainCityInfoBox/MainCityInfoBox';
 import useFetchData from '../../hooks/useFetchData';
 import { GoArrowUp } from "react-icons/go";
 import { GradeContext } from '../../context/Grade';
+import Loading from '../Loading/Loading';
 
 
 
