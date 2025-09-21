@@ -1,8 +1,11 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import useFetchData from '../../hooks/useFetchData'
+import { GradeContext } from '../../context/Grade'
 
 export default function Forecast({city}) {
     const {fetchData , isLoading} = useFetchData('forecast' , city , '6')
+    const {grade , setGrade} = useContext(GradeContext)
+    
 
     const getWeekDayFunc= (date) => {
         const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -27,7 +30,7 @@ export default function Forecast({city}) {
                                     <img src={item.day.condition.icon} alt="" className='w-10 h-10'/>
                                     <h5 className='hidden sm:line-clamp-1  md:hidden lg:line-clamp-1'>{item.day.condition.text}</h5>
                                 </div>
-                                <h6 className='text-right'>{Math.round(item.day.maxtemp_c)}° / {Math.round(item.day.mintemp_c)}°</h6>
+                                <h6 className='text-right'>{Math.ceil(grade === 'c' ? item.day.maxtemp_c : item.day.maxtemp_f)}° / {Math.round(grade === 'c' ? item.day.mintemp_c : item.day.mintemp_f)}°</h6>
                             </div>
                         )
                     })}
@@ -42,7 +45,7 @@ export default function Forecast({city}) {
                                     <img src={item.day.condition.icon} alt="" className='w-10 h-10'/>
                                     <h5 className='hidden sm:line-clamp-1  md:hidden lg:line-clamp-1'>{item.day.condition.text}</h5>
                                 </div>
-                                <h6 className='text-right'>{Math.round(item.day.maxtemp_c)}° / {Math.round(item.day.mintemp_c)}°</h6>
+                                <h6 className='text-right'>{Math.ceil(grade === 'c' ? item.day.maxtemp_c : item.day.maxtemp_f)}° / {Math.round(grade === 'c' ? item.day.mintemp_c : item.day.mintemp_f)}°</h6>
                             </div>
                         )
                     })}

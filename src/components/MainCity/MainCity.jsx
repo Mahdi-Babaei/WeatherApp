@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { PiWind } from "react-icons/pi";
 import { PiDropLight } from "react-icons/pi";
 import { PiEye } from "react-icons/pi";
 import MainCityInfoBox from './MainCityInfoBox/MainCityInfoBox';
 import useFetchData from '../../hooks/useFetchData';
 import { GoArrowUp } from "react-icons/go";
+import { GradeContext } from '../../context/Grade';
 
 
 
 export default function MainCity({city}) {
-  const {fetchData , isLoading} = useFetchData('current' , city)
+  const {fetchData , isLoading} = useFetchData('forecast' , city)
+  const {grade , setGrade} = useContext(GradeContext)
 
   const getDateFunc = () => {
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -30,13 +32,13 @@ export default function MainCity({city}) {
                   <img src={fetchData.current.condition.icon} alt="" className='w-16 h-16'/>
                   <span className='font-NunitoLight text-xl -ml-1'>{fetchData.current.condition.text}</span>
                 </div>
-                <span className='text-9xl font-NunitoBold -mt-4'>{Math.round(fetchData.current.temp_c)}</span>
+                <span className='text-9xl font-NunitoBold -mt-4'>{Math.round(grade === 'c' ? fetchData.current.temp_c : fetchData.current.temp_f)}</span>
                 <div className='font-NunitoLight text-lg'>
                   <div className='flex items-center justify-center gap-x-2 -ml-2'>
-                    <span className='flex items-center'><GoArrowUp className='w-6 h-6'/>42°</span>
-                    <span className='flex items-center'><GoArrowUp className='w-6 h-6 rotate-180'/>20°</span>
+                    <span className='flex items-center'><GoArrowUp className='w-6 h-6'/>{Math.ceil(grade === 'c' ? fetchData.forecast.forecastday[0].day.maxtemp_c : fetchData.forecast.forecastday[0].day.maxtemp_f)}°</span>
+                    <span className='flex items-center'><GoArrowUp className='w-6 h-6 rotate-180'/>{Math.round(grade === 'c' ? fetchData.forecast.forecastday[0].day.mintemp_c : fetchData.forecast.forecastday[0].day.mintemp_f)}°</span>
                   </div>
-                  <span>Feels like 25°</span>
+                  <span>Feels like {Math.round(grade === 'c' ? fetchData.current.feelslike_c : fetchData.current.feelslike_f)}°</span>
                 </div>
               </div>
               <div className='flex items-center w-full justify-around'>

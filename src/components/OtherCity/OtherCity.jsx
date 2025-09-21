@@ -1,8 +1,11 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import useFetchData from '../../hooks/useFetchData';
+import { GradeContext } from '../../context/Grade';
 
 export default function OtherCity({city}) {
     const {fetchData , isLoading} = useFetchData('current' , city)
+    const {grade , setGrade} = useContext(GradeContext)
+
 
   return (
     <>
@@ -13,7 +16,7 @@ export default function OtherCity({city}) {
                 <h3 className='font-NunitoRegular text-xl line-clamp-2'>{fetchData.location.name}</h3>
                 <span className='font-NunitoLight tracking-wide'>{fetchData.current.condition.text}</span>
             </div>
-            <h2 className='text-6xl md:text-7xl xl:text-6xl 2xl:text-7xl font-NunitoBold text-right'>{Math.round(fetchData.current.temp_c)}°</h2>
+            <h2 className='text-6xl md:text-7xl xl:text-6xl 2xl:text-7xl font-NunitoBold text-right'>{Math.round(grade === 'c' ? fetchData.current.temp_c : fetchData.current.temp_f)}°</h2>
         </div>
       )}
     </>
