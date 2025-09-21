@@ -10,6 +10,7 @@ import OtherCity from '../components/OtherCity/OtherCity';
 import AddCity from '../components/AddCity/AddCity';
 import Overview from '../components/Overview/Overview';
 import MoreInfo from '../components/MoreInfo/MoreInfo';
+import Social from '../components/Social/Social';
 
 export default function Desktop({favCities , city}) {
   return (
@@ -26,6 +27,7 @@ export default function Desktop({favCities , city}) {
                       <SearchBox />
                     </div>
                     <div className='flex items-center justify-end gap-x-8 col-span-3'>
+                      <Social />
                       <Theme />
                       <Notifications />
                       <User />
