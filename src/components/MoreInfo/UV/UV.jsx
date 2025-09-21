@@ -17,7 +17,7 @@ export default function UV({city}) {
 
   useEffect(() => {
     let uv = !isLoading && fetchData && fetchData.current.uv
-    uv < 3 ? setUVWidth(0) : uv < 6 ? setUVWidth(25) : uv < 9 ? setUVWidth(50) : uv < 11 ? setUVWidth(75) : setUVWidth(95)
+    uv < 3 ? setUVWidth(0) : uv < 6 ? setUVWidth(25) : uv < 9 ? setUVWidth(50) : uv < 11 ? setUVWidth(75) : setUVWidth(97)
 
   })
 
@@ -32,10 +32,10 @@ export default function UV({city}) {
               background:
                 "linear-gradient(90deg,var(--color-green-500) 0%, var(--color-yellow-500) 25%, var(--color-orange-500) 50%, var(--color-red-500) 75%, var(--color-purple-500) 100%)",
             }}>
-            <span style={{left: `${uvWidth}%`}} className={`transition-all duration-1000 w-6 h-6 rounded-full border-2 block absolute -top-1.5 ${uvWidth == 95 ? 'bg-purple-500' : uvWidth >= 75 ? 'bg-red-500' : uvWidth >= 50 ? 'bg-orange-500' : uvWidth >= 25 ? 'bg-yellow-500' : 'bg-green-500'} `}></span>
+            <span style={{left: `${uvWidth}%`}} className={`transition-all duration-1000 w-6 h-6 rounded-full border-2 block absolute -top-1.5 ${uvWidth == 97 ? 'bg-purple-500' : uvWidth >= 75 ? 'bg-red-500' : uvWidth >= 50 ? 'bg-orange-500' : uvWidth >= 25 ? 'bg-yellow-500' : 'bg-green-500'} `}></span>
           </div>
           <div>
-            <h6 className={`font-NunitoSemibold ${uvWidth == 95 ? 'text-purple-500' : uvWidth >= 75 ? 'text-red-500' : uvWidth >= 50 ? 'text-orange-500' : uvWidth >= 25 ? 'text-yellow-500' : 'text-green-500'}`}>{uvWidth < 25 ? UVconditions[0].title : uvWidth < 50 ? UVconditions[1].title : uvWidth < 75 ? UVconditions[2].title : uvWidth < 95 ? UVconditions[3].title : UVconditions[4].title}</h6>
+            <h6 className={`font-NunitoSemibold ${uvWidth == 97 ? 'text-purple-500' : uvWidth >= 75 ? 'text-red-500' : uvWidth >= 50 ? 'text-orange-500' : uvWidth >= 25 ? 'text-yellow-500' : 'text-green-500'}`}>{uvWidth < 25 ? UVconditions[0].title : uvWidth < 50 ? UVconditions[1].title : uvWidth < 75 ? UVconditions[2].title : uvWidth < 95 ? UVconditions[3].title : UVconditions[4].title}</h6>
             <p className="text-base h-18 line-clamp-3">{uvWidth < 25 ? UVconditions[0].desc : uvWidth < 50 ? UVconditions[1].desc : uvWidth < 75 ? UVconditions[2].desc : uvWidth < 95 ? UVconditions[3].desc : UVconditions[4].desc}</p>
           </div>
         </div>
