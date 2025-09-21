@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import ThemeProvider from './context/Theme';
 import CityProvider from './context/City';
+import GradeProvider from './context/Grade';
 
 
 
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <ThemeProvider>
       <CityProvider>
-      <App />
+        <GradeProvider>
+          <App />
+        </GradeProvider>
       </CityProvider>
     </ThemeProvider>
   </React.StrictMode>

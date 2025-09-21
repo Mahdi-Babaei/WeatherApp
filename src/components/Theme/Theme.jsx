@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext } from "react";
 import { HiOutlineMoon } from "react-icons/hi2";
 import { LuSun } from "react-icons/lu";
 import { ThemeContext } from "../../context/Theme";

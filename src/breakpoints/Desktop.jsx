@@ -11,6 +11,7 @@ import AddCity from '../components/AddCity/AddCity';
 import Overview from '../components/Overview/Overview';
 import MoreInfo from '../components/MoreInfo/MoreInfo';
 import Social from '../components/Social/Social';
+import Grade from '../components/Grade/Grade';
 
 export default function Desktop({favCities , city}) {
   return (
@@ -28,6 +29,7 @@ export default function Desktop({favCities , city}) {
                     </div>
                     <div className='flex items-center justify-end gap-x-8 col-span-3'>
                       <Social />
+                      <Grade />
                       <Theme />
                       <Notifications />
                       <User />

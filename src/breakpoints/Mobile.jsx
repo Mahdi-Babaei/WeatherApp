@@ -2,6 +2,7 @@ import React from 'react'
 import MainCity from '../components/MainCity/MainCity';
 import SearchBox from '../components/SearchBox/SearchBox';
 import Theme from '../components/Theme/Theme';
+import Grade from '../components/Grade/Grade';
 import Notifications from '../components/Notifications/Notifications';
 import User from '../components/User/User';
 import Forecast from '../components/Forecast/Forecast';
@@ -16,8 +17,9 @@ export default function Mobile({favCities , city}) {
   return (
     <>
         <div className='bg-light-secondary dark:bg-dark-secondary h-20 absolute top-0 left-0 w-full flex 2xl:hidden items-center px-5 justify-between'>
-            <div className='flex items-center gap-x-1'>
+            <div className='flex items-center gap-x-3'>
                 <Theme />
+                <Grade />
                 <Notifications />
             </div>
             <User />
