@@ -3,7 +3,7 @@ import useFetchData from '../../../hooks/useFetchData'
 import { CityContext } from '../../../context/City'
 
 
-export default function ChartData({setChartData}) {
+export default function ChartData({setChartData , grade}) {
     const {city , setCity} = useContext(CityContext)
     const {fetchData , isLoading} = useFetchData('forecast' , city , '7')
     
@@ -20,7 +20,7 @@ export default function ChartData({setChartData}) {
         !isLoading && fetchData && fetchData.forecast.forecastday.map(item => {
             let newWeekDay = {
                 day: getWeekDayFunc(item.date) ,
-                temp: Math.round(item.day.avgtemp_c),
+                temp: Math.round(grade === 'c' ? item.day.avgtemp_c : item.day.avgtemp_f),
                 hum: Math.round(item.day.avghumidity) ,
                 rain: Math.round(item.day.daily_chance_of_rain)
             }
@@ -28,7 +28,7 @@ export default function ChartData({setChartData}) {
         })
 
         setChartData(data)
-    } , [fetchData])
+    } , [fetchData , grade])
     
   return (
     <></>
