@@ -1,5 +1,5 @@
 .spinner {
- --clr: white;
+ --clr: var(--color-blue-400);
  --gap: 6px;
    /* gap between each circle */
  width: 100px;

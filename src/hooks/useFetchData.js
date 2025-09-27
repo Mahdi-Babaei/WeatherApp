@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const weatherApi = 'https://api.weatherapi.com/v1'
-const apiKey = '34ed6d8bb44d46aebf980813251109'
+const apiKey = '5da074e34e3e41e6b6583350252709'
 
 export default function useFetchData(apiMethod , targetCity , days = '1' , aqi = 'no') {
     const [fetchData , setFetchData] = useState(null)

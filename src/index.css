@@ -24,6 +24,7 @@
     --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-purple-500: oklch(62.7% 0.265 303.9);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -307,6 +308,9 @@
   .mt-auto {
     margin-top: auto;
   }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
   .mr-auto {
     margin-right: auto;
   }
@@ -400,6 +404,12 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
+  .w-2\/4 {
+    width: calc(2/4 * 100%);
+  }
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
@@ -453,6 +463,24 @@
   }
   .max-w-2\/3 {
     max-width: calc(2/3 * 100%);
+  }
+  .max-w-2\/4 {
+    max-width: calc(2/4 * 100%);
+  }
+  .min-w-2 {
+    min-width: calc(var(--spacing) * 2);
+  }
+  .min-w-2\/3 {
+    min-width: calc(2/3 * 100%);
+  }
+  .min-w-2\/4 {
+    min-width: calc(2/4 * 100%);
+  }
+  .min-w-3 {
+    min-width: calc(var(--spacing) * 3);
+  }
+  .min-w-3\/4 {
+    min-width: calc(3/4 * 100%);
   }
   .min-w-16 {
     min-width: calc(var(--spacing) * 16);
@@ -626,6 +654,12 @@
     --tw-border-style: none;
     border-style: none;
   }
+  .border-gray-100 {
+    border-color: var(--color-gray-100);
+  }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
+  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
@@ -794,6 +828,12 @@
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
+  }
+  .pr-1 {
+    padding-right: calc(var(--spacing) * 1);
+  }
+  .pr-2 {
+    padding-right: calc(var(--spacing) * 2);
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
@@ -1314,6 +1354,11 @@
       :where(& > :not(:last-child)) {
         border-color: var(--color-gray-700);
       }
+    }
+  }
+  .dark\:border-gray-700 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-gray-700);
     }
   }
   .dark\:border-white\/20 {
