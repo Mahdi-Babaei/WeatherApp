@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { PiWind } from "react-icons/pi";
 import { PiDropLight } from "react-icons/pi";
 import { PiEye } from "react-icons/pi";
@@ -6,13 +6,11 @@ import MainCityInfoBox from './MainCityInfoBox/MainCityInfoBox';
 import useFetchData from '../../hooks/useFetchData';
 import { GoArrowUp } from "react-icons/go";
 import { GradeContext } from '../../context/Grade';
-import Loading from '../Loading/Loading';
-
 
 
 export default function MainCity({city}) {
   const {fetchData , isLoading} = useFetchData('forecast' , city)
-  const {grade , setGrade} = useContext(GradeContext)
+  const {grade} = useContext(GradeContext)
 
   const getDateFunc = () => {
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -30,7 +28,7 @@ export default function MainCity({city}) {
               </div>
               <div className='flex flex-col items-center'>
                 <div className='flex items-center'>
-                  <img src={fetchData.current.condition.icon} alt="" className='w-16 h-16'/>
+                  <img src={fetchData.current.condition.icon} alt={fetchData.current.condition.text} className='w-16 h-16'/>
                   <span className='font-NunitoLight text-xl -ml-1'>{fetchData.current.condition.text}</span>
                 </div>
                 <span className='text-9xl font-NunitoBold -mt-4'>{Math.round(grade === 'c' ? fetchData.current.temp_c : fetchData.current.temp_f)}</span>

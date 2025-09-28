@@ -1,7 +1,6 @@
 import React from 'react'
 import MainCity from '../components/MainCity/MainCity';
 import SearchBox from '../components/SearchBox/SearchBox';
-import SidebarMenu from '../components/SidebarMenu/SidebarMenu';
 import Theme from '../components/Theme/Theme';
 import Notifications from '../components/Notifications/Notifications';
 import User from '../components/User/User';
@@ -16,7 +15,6 @@ import Grade from '../components/Grade/Grade';
 export default function Desktop({favCities , city}) {
   return (
     <>
-        {/* <SidebarMenu /> */}
         <div className='flex flex-col gap-y-5 w-full '>
             <div className='grid grid-cols-4 gap-x-5'>
               <div className='col-span-1'>

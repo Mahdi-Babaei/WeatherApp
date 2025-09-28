@@ -6,7 +6,7 @@ import { GradeContext  } from "../../../context/Grade";
 
 export default function OverviewChart ({ activeChart , setActiveChart }) {
   const [chartData , setChartData] = useState([])
-  const {grade , setGrade} = useContext(GradeContext)
+  const {grade} = useContext(GradeContext)
 
   return (
     <div className="w-full h-80 xl:h-full select-none">

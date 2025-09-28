@@ -5,7 +5,7 @@ import 'animate.css';
 
 
 export default function SearchBoxModal({ fetchData , setIsSearchModalOpen , setSearchBoxValue}) {
-    const {city , setCity , favCities , setFavCities} = useContext(CityContext)
+    const {setCity , setFavCities} = useContext(CityContext)
     
   return (
     <>

@@ -12,7 +12,7 @@ export default function SearchBox() {
   const [isSearchModalOpen , setIsSearchModalOpen] = useState(false)
   const [searchBoxValue , setSearchBoxValue] = useState('')
   const inputElem = useRef(null)
-  const {fetchData , isLoading} = useFetchData('search' , regex.test(searchBoxValue) ? searchBoxValue : ' ' )
+  const {fetchData} = useFetchData('search' , regex.test(searchBoxValue) ? searchBoxValue : ' ' )
 
   useEffect(() => {
     isSearchModalOpen ? inputElem.current.focus() : inputElem.current.blur()

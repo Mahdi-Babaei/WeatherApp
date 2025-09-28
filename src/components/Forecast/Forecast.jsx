@@ -4,7 +4,7 @@ import { GradeContext } from '../../context/Grade'
 
 export default function Forecast({city}) {
     const {fetchData , isLoading} = useFetchData('forecast' , city , '6')
-    const {grade , setGrade} = useContext(GradeContext)
+    const {grade} = useContext(GradeContext)
     
 
     const getWeekDayFunc= (date) => {
@@ -27,7 +27,7 @@ export default function Forecast({city}) {
                             <div className='grid grid-cols-3 text-base 2xl:text-xl  font-NunitoLight items-center'>
                                 <h4 className='font-NunitoSemibold text-left'>Tommorow</h4>
                                 <div className="flex items-center gap-x-2 mx-auto sm:mx-0 md:mx-auto lg:mx-0">
-                                    <img src={item.day.condition.icon} alt="" className='w-10 h-10'/>
+                                    <img src={item.day.condition.icon} alt={item.day.condition.text} className='w-10 h-10'/>
                                     <h5 className='hidden sm:line-clamp-1  md:hidden lg:line-clamp-1'>{item.day.condition.text}</h5>
                                 </div>
                                 <h6 className='text-right'>{Math.ceil(grade === 'c' ? item.day.maxtemp_c : item.day.maxtemp_f)}° / {Math.round(grade === 'c' ? item.day.mintemp_c : item.day.mintemp_f)}°</h6>

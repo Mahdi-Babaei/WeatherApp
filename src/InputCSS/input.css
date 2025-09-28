@@ -5,22 +5,26 @@
 
 @font-face {
     font-family: 'NunitoRegular' ;
-    src: url('/public/fonts/Nunito/Nunito-Regular.ttf');
+    src: url('/public/fonts/Nunito/Nunito-Regular.woff2') format('woff2');
+    font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'NunitoLight' ;
-    src: url('/public/fonts/Nunito/Nunito-Light.ttf');
+    src: url('/public/fonts/Nunito/Nunito-Light.woff2') format('woff2');
+    font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'NunitoSemibold' ;
-    src: url('/public/fonts/Nunito/Nunito-SemiBold.ttf');
+    src: url('/public/fonts/Nunito/Nunito-SemiBold.woff2') format('woff2');
+    font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'NunitoBold' ;
-    src: url('/public/fonts/Nunito/Nunito-Bold.ttf');
+    src: url('/public/fonts/Nunito/Nunito-Bold.woff2') format('woff2');
+    font-style: normal;
     font-display: swap;
 }
 

@@ -4,7 +4,7 @@ import { CityContext } from '../../../context/City'
 
 
 export default function ChartData({setChartData , grade}) {
-    const {city , setCity} = useContext(CityContext)
+    const {city} = useContext(CityContext)
     const {fetchData , isLoading} = useFetchData('forecast' , city , '7')
     
     let data = [{day: '' , temp: 10 , hum: 30 , rain: 20}]

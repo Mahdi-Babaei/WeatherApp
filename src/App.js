@@ -10,8 +10,8 @@ import Loading from './components/Loading/Loading';
 
 
 export default function App() {
-  const {theme , setTheme} = useContext(ThemeContext)
-  const {city , setCity , favCities} = useContext(CityContext)
+  const {theme} = useContext(ThemeContext)
+  const {city , favCities} = useContext(CityContext)
   const {fetchData , isLoading} = useFetchData('current' , city)
   const isDesktop = useMediaQuery({
     query: '(min-width: 1280px)'

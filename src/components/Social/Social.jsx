@@ -10,13 +10,13 @@ export default function Social() {
   return (
     <>
         <div className='flex items-center gap-x-4 text-zinc-500 mx-auto xl:mx-0'>
-            <a target='_blank' href="https://github.com/mahdi-babaei" className='hover:text-black dark:hover:text-zinc-100 transition-all'>
+            <a target='_blank' rel='noreferrer' aria-label="Github Account" href="https://github.com/mahdi-babaei" className='hover:text-black dark:hover:text-zinc-100 transition-all'>
                 <FaGithub className='w-7 h-7'/>
             </a>
-            <a target='_blank' href="https://t.me/lastxfighter" className='hover:text-black dark:hover:text-zinc-100 transition-all'>
+            <a target='_blank' rel='noreferrer' aria-label="Telegram Account" href="https://t.me/lastxfighter" className='hover:text-black dark:hover:text-zinc-100 transition-all'>
                 <FaTelegram className='w-7 h-7'/>
             </a>
-            <a target='_blank' href="https://instagram.com/lastxfighter" className='hover:text-black dark:hover:text-zinc-100 transition-all'>
+            <a target='_blank' rel='noreferrer' aria-label="Instagram Account" href="https://instagram.com/lastxfighter" className='hover:text-black dark:hover:text-zinc-100 transition-all'>
                 <FaInstagram className='w-7 h-7'/>
             </a>
         </div>
