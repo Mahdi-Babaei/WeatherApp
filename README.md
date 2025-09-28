@@ -5,7 +5,7 @@
 ## Demo
 
 Check out the live app here:  
-🔗 [WeatherNow Live](https://mahdi-babaei.github.io/WeatherApp/)
+🔗 <a href='https://mahdi-babaei.github.io/WeatherApp/' target='_blank'>WeatherNow Live<a/>
 
 ## Features
 
@@ -29,4 +29,5 @@ Check out the live app here:
 - **Frontend:** HTML, CSS, JavaScript, TailwindCSS, React
 - **API:** weatherapi
 - **Hosting:** GitHub Pages  
+
 
