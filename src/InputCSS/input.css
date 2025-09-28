@@ -6,18 +6,22 @@
 @font-face {
     font-family: 'NunitoRegular' ;
     src: url('/public/fonts/Nunito/Nunito-Regular.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'NunitoLight' ;
     src: url('/public/fonts/Nunito/Nunito-Light.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'NunitoSemibold' ;
     src: url('/public/fonts/Nunito/Nunito-SemiBold.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'NunitoBold' ;
     src: url('/public/fonts/Nunito/Nunito-Bold.ttf');
+    font-display: swap;
 }
 
 
