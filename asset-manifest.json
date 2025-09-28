@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/WeatherApp/static/css/main.20f5bf77.css",
+    "main.css": "/WeatherApp/static/css/main.7f29f9f1.css",
     "main.js": "/WeatherApp/static/js/main.dae9dc11.js",
-    "static/media/Nunito-Light.ttf": "/WeatherApp/static/media/Nunito-Light.ebdd32f060817174159b.ttf",
-    "static/media/Nunito-Regular.ttf": "/WeatherApp/static/media/Nunito-Regular.5c82641fd5d0f561cb29.ttf",
-    "static/media/Nunito-SemiBold.ttf": "/WeatherApp/static/media/Nunito-SemiBold.925a164d04ae61fca041.ttf",
-    "static/media/Nunito-Bold.ttf": "/WeatherApp/static/media/Nunito-Bold.01134d79d203a71a4a73.ttf",
+    "static/media/Nunito-SemiBold.woff2": "/WeatherApp/static/media/Nunito-SemiBold.f171b7cc5949f00b1c16.woff2",
+    "static/media/Nunito-Regular.woff2": "/WeatherApp/static/media/Nunito-Regular.00ee14ab2e099377f996.woff2",
+    "static/media/Nunito-Bold.woff2": "/WeatherApp/static/media/Nunito-Bold.977de8a8e61cd84bb1aa.woff2",
+    "static/media/Nunito-Light.woff2": "/WeatherApp/static/media/Nunito-Light.1b9c52f3d915b34402a9.woff2",
     "index.html": "/WeatherApp/index.html",
-    "main.20f5bf77.css.map": "/WeatherApp/static/css/main.20f5bf77.css.map",
+    "main.7f29f9f1.css.map": "/WeatherApp/static/css/main.7f29f9f1.css.map",
     "main.dae9dc11.js.map": "/WeatherApp/static/js/main.dae9dc11.js.map"
   },
   "entrypoints": [
-    "static/css/main.20f5bf77.css",
+    "static/css/main.7f29f9f1.css",
     "static/js/main.dae9dc11.js"
   ]
 }
