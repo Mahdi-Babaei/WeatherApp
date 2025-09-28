@@ -9,7 +9,7 @@ Check out the live app here:
 
 ## Features
 
-- **Current Weather:** Displays temperature, sky conditions, humidity, wind speed, and atmospheric pressure.  
+- **Current Weather:** Displays temperature, sky conditions, humidity, wind speed, and visibility.  
 - **Weather Forecast:** Provides hourly and daily forecasts for upcoming days.  
 - **Location Search:** Quickly find weather data for any city or region.  
 - **Temperature Unit Conversion:** Easily switch between Celsius and Fahrenheit to view the temperature in your preferred unit.  
@@ -29,3 +29,4 @@ Check out the live app here:
 - **Frontend:** HTML, CSS, JavaScript, TailwindCSS, React
 - **API:** weatherapi
 - **Hosting:** GitHub Pages  
+
